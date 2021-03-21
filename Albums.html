@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./Albums.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+<h1>
+    ALBUMS
+</h1>
+    <p> Per categorie verdeelde projecten </p>
+    <nav>
+        <ul class="navLinks">
+            <li><a href="./website.html"> Terug</a></li>
+            <li><a href="./Projecten%20uitgelegd.html"> Projecten uitgelegd</a></li>
+            <li><a href="./About%20me.html"> About me</a></li>
+        </ul>
+    </nav>
+
+<section id="portfolio">
+    <div class="project">
+        <img src="../Skill week/Afbeeldingen/groot jurk.jpg" alt=" " class="project-image">
+    <div class="grid-overlay">
+            <button class="button"><a href="./album1.html">View More</a></button>
+    </div>
+    </div>
+
+    <div class="project">
+        <img src="../Skill week/Afbeeldingen/JurkB.jpg" alt=" " class="project-image">
+    <div class="grid-overlay">
+            <button class="button"><a href="./album2.html">View More</a></button>
+    </div>
+    </div>
+
+    <div class="overlay">
+        <div class="overlay-inner">
+            <button class="close"> Close </button>
+        </div>
+    </div>
+</section>
+
+<script>
+const button = document.querySelectorAll('.project');
+const overlay = document.querySelector('.overlay');
+const overlayImage = document.querySelector('.overlay-inner img');
+
+function open(e){
+    overlay.classList.add('open');
+    const src = e.currentTarget.querySelector('img').src;
+    overlayImage.src = src;}
+
+
+function close(){
+    overlay.classList.remove('open');}
+
+buttons.forEach(button => button.addEventListener('click', open));
+overlay.addEventListener('click', close);
+
+</script>
+
+
+<!--<main>
+    <div class="left">
+        <img src="../Skill week/groot jurk.jpg" id="main-img" alt="jurk">
+    </div>
+<div class="right">
+    <h2> HIER KOMT TEKST?</h2>
+
+
+    <div class="gallery">
+        <img class="active" src="../Skill week/groot jurk.jpg" id="main-img" alt="jurk">
+        <img src="../Skill week/Klein juurk.jpg" alt="jurk">
+        <img src="../Skill week/JurkB.jpg" alt="jurk">
+    </div>
+</main>
+<section>
+    <div class="j">
+        <img src="../Skill week/groot jurk.jpg" class="jurk" alt="jurk">
+        <div class="jurkEen">
+            <img src="../Skill week/Klein juurk.jpg" class="jurkEen-active" alt="jurk">  </div>
+    </div>
+</section>
+ div class="jurk">
+  <img class="jurkGroot" src="../Skill week/groot jurk.jpg" alt="room1" />
+  <div class="jurkKlein">
+    <img src="../Skill week/Klein juurk.jpg" class="room-active" alt="" />
+  </div>
+</div>
+</section>-->
+
+
+<script src="photo.js"></script>
+</body>
+</html>
